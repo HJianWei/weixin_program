@@ -1,0 +1,10 @@
+{
+    "window": {
+      "backgroundTextStyle": "light",
+      "backgroundColor": "#eeeeee",
+      "navigationBarBackgroundColor": "#DC143C",
+      "navigationBarTitleText": "わたし",
+      "navigationBarTextStyle": "black",
+      "enablePullDownRefresh": true
+    }
+}

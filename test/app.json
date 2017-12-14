@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/personal/personal"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#DC143C",
+    "navigationBarBackgroundColor": "#8ab839",
+    "navigationBarTitleText": "小程序初体验",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "backgroundColor": "#f2f2f2",
+    "color": "#000000",
+    "selectedColor": "#8ab839",
+    "borderStyle": "black",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath":"icons/home.png",
+      "selectedIconPath":"icons/home_selected.png"
+    },
+    {
+      "pagePath": "pages/logs/logs",
+      "text": "电影",
+      "iconPath": "icons/movie.png",
+      "selectedIconPath": "icons/movie_selected.png"
+    },
+    {
+      "pagePath": "pages/personal/personal",
+      "text": "我的",
+      "iconPath": "icons/personal.png",
+      "selectedIconPath": "icons/personal_selected.png"
+    }]
+  }
+}
