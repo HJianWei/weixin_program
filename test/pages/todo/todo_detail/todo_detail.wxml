@@ -1,0 +1,25 @@
+<!--pages/todo/todo_detail/todo_detail.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <input class="title" placeholder="在“{{title}}”中添加任务..." name="title" auto-focus/>
+    <button type="primary" form-type="submit" style="margin:18px 10px;"> 保存 </button>
+  </form>
+  <view class="list">
+    <block wx:for="{{list}}" wx:for-item="vo" wx:key="id">
+      <scroll-view class="view-body" scroll-x="true" scroll-left="{{left}}">
+        <view class="item">
+          <view class="content" bindtap="detail" data-id="{{vo.id}}">
+            <text class="text">{{vo.title}}</text>
+          </view>
+          <view class="menu rd" bindtap="del" data-id="{{vo.id}}">
+            删除
+          </view>
+          <view class="menu lb" bindtap="top" data-id="{{vo.id}}">
+            置顶
+          </view>
+        </view>
+      </scroll-view>
+    </block>
+  </view>
+  <view class="xs {{xs}}" data-index="{{xs_index}}" bindtap="xsPage2"></view>
+</view>

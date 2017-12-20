@@ -1,0 +1,24 @@
+<!--pages/todo/todo.wxml-->
+<view class="container">
+  <view class="list">
+    <block wx:for="{{list}}" wx:for-item="vo" wx:key="id">
+      <scroll-view class="view-body" scroll-x="true" scroll-left="{{left}}">
+        <view class="item">
+          <view class="content" bindtap="detail" data-id="{{vo.id}}">
+            <text class="text">{{vo.title}}</text>
+          </view>
+          <view class="menu rd" bindtap="del" data-id="{{vo.id}}">
+            删除
+          </view>
+          <view class="menu lb" bindtap="top" data-id="{{vo.id}}">
+            置顶
+          </view>
+        </view>
+      </scroll-view>
+    </block>
+    <button type="primary" plain="true" style="margin:18px 10px;" bindtap="toAddPage"> 
+    新建清单
+    </button>
+  </view>
+  <view class="add" bindtap="toAddPage2">+</view>
+</view>

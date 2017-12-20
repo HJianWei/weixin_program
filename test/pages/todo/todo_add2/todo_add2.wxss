@@ -1,0 +1,9 @@
+/* pages/todo/todo_add2/todo_add2.wxss */
+.title{
+  padding:16px 8px;
+  border-bottom: 1px solid #DADADA;
+}
+.picker{
+  padding:16px 8px;
+  border-bottom: 1px solid #DADADA;
+}

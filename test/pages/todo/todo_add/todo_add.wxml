@@ -1,0 +1,10 @@
+<!--pages/todo/todo_add/todo_add.wxml-->
+<view class="container">
+  <view class="section">
+    <form bindsubmit="formSubmit">
+      <input class="title" placeholder="清单名称" name="title" auto-focus/>
+      <!-- <textarea class="title" bindblur="bindTextAreaBlur" name="content" placeholder="清单描述" /> -->
+      <button type="primary" form-type="submit" style="margin:18px 10px;"> 保存 </button>
+    </form>
+  </view>
+</view>

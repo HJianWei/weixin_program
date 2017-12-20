@@ -1,0 +1,15 @@
+<!--pages/todo/todo_add2/todo_add2.wxml-->
+<view class="container">
+  <view class="section">
+    <form bindsubmit="formSubmit">
+      <input class="title" placeholder="添加任务..." name="title" auto-focus/>
+      <!-- <textarea class="title" bindblur="bindTextAreaBlur" name="content" placeholder="清单描述" /> -->
+      <picker bindchange="bindPickerChange" name="type" value="{{index}}" range="{{type}}">
+        <view class="picker">
+          选择清单：{{type[index]}}
+        </view>
+      </picker>
+      <button type="primary" form-type="submit" style="margin:18px 10px;"> 保存 </button>
+    </form>
+  </view>
+</view>

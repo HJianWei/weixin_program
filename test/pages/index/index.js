@@ -15,6 +15,11 @@ Page({
       url: '../haha/haha'
     })
   },
+  toAddPage: function (e) {
+    wx.navigateTo({
+      url: '../add/add'
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

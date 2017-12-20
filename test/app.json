@@ -2,7 +2,13 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/personal/personal"
+    "pages/personal/personal",
+    "pages/add/add",
+    "pages/haha/haha",
+    "pages/todo/todo_index/todo_index",
+    "pages/todo/todo_add/todo_add",
+    "pages/todo/todo_add2/todo_add2",
+    "pages/todo/todo_detail/todo_detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -17,23 +23,37 @@
     "color": "#000000",
     "selectedColor": "#8ab839",
     "borderStyle": "black",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath":"icons/home.png",
-      "selectedIconPath":"icons/home_selected.png"
-    },
-    {
-      "pagePath": "pages/logs/logs",
-      "text": "电影",
-      "iconPath": "icons/movie.png",
-      "selectedIconPath": "icons/movie_selected.png"
-    },
-    {
-      "pagePath": "pages/personal/personal",
-      "text": "我的",
-      "iconPath": "icons/personal.png",
-      "selectedIconPath": "icons/personal_selected.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/home.png",
+        "selectedIconPath": "icons/home_selected.png"
+      },
+      {
+        "pagePath": "pages/todo/todo_index/todo_index",
+        "text": "todo",
+        "iconPath": "icons/note.png",
+        "selectedIconPath": "icons/note_selected.png"
+      },
+      {
+        "pagePath": "pages/haha/haha",
+        "text": "菜谱",
+        "iconPath": "icons/cook.png",
+        "selectedIconPath": "icons/cook_selected.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "电影",
+        "iconPath": "icons/movie.png",
+        "selectedIconPath": "icons/movie_selected.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "icons/personal.png",
+        "selectedIconPath": "icons/personal_selected.png"
+      }
+    ]
   }
 }
