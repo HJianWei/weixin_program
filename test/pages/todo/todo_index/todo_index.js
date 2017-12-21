@@ -5,7 +5,8 @@ var app = getApp();
 var all = {};
 Page({
   data: {
-    list: {}
+    list: {},
+    src: "../../../icons/folder.png"
   },
   //清单详情
   detail: function (e) {

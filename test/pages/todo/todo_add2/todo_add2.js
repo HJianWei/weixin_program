@@ -26,6 +26,7 @@ Page({
       return;
     }
     value.id = parseInt((new Date()).valueOf() / 1000);
+    value.finish = false;
     data.list[this.data.index].list.push(value);
     data.time = parseInt((new Date()).valueOf() / 1000);
     try {

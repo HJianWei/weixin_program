@@ -1,9 +1,22 @@
 /* pages/todo/todo_detail/todo_detail.wxss */
-.title{
-  padding:16px 8px;
-  border-bottom: 1px solid #DADADA;
+.box{
+  display: flex;
+  align-items: center;
 }
-.gn{background:#1AAD16}
+.title{
+  margin:0.5vw 1.5vw 0 1.25vw;
+  border: 0.1vw solid #DADADA;
+  border-radius: 1.5vw;
+  width: 70%;
+  padding:2vw;
+  float: left;
+}
+.btn{
+  background-color: #ffffff;
+  width:20vw;
+  color:#1AAD16;
+}
+.gn{background:#8ab839}
 .bu{background:dodgerblue}
 .rd{background:orangered}
 .og{background:orange}
@@ -23,12 +36,25 @@
   width: 160%
 }
 .item .content{
+  display: flex;
+  align-items: center;
   width: 80%;
   float: left;
+}
+.item .content .pic{
+  width: 25px; 
+  height: 25px;
+  margin-left: 3vw;
 }
 .item .content .text{
   vertical-align: top;
   margin-left: 3vw;
+}
+.item .content .text-finish{
+  vertical-align: top;
+  text-decoration: line-through;
+  margin-left: 3vw;
+  color:#AAA;
 }
 .item .menu{
   width: 10%;
@@ -36,20 +62,12 @@
   text-align: center;
   color:snow;
 }
-.xs{
-  position: fixed;
-  left: 40rpx;
-  bottom: 40rpx;
-  background: #393F4F;
-  color: #aaa;
-  font-weight: bold;
-  font-size: 60rpx;
-  width: 50rpx;
-  height: 50rpx;
-  line-height: 50rpx;
-  padding: 16rpx; 
-  text-align: center;
-  border-radius: 50%;
-  box-shadow: 0 0 8px 1px #666699;
-  z-index: 1000;
-} 
+.get_complete{
+  margin-top: 5vw;
+  border-radius: 1.5vw;
+  background-color: #8ab839;
+  color: #ffffff;
+  width:42%;
+  height:8vw;
+  line-height: 8vw;
+}

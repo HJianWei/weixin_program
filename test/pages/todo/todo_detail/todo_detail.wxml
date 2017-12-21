@@ -1,25 +1,44 @@
 <!--pages/todo/todo_detail/todo_detail.wxml-->
 <view class="container">
   <form bindsubmit="formSubmit">
-    <input class="title" placeholder="在“{{title}}”中添加任务..." name="title" auto-focus/>
-    <button type="primary" form-type="submit" style="margin:18px 10px;"> 保存 </button>
+    <view class="box">
+    <input class="title" placeholder="在“{{title}}”中添加任务..." name="title" value="{{input}}"/>
+    <button class="btn" form-type="submit"> 确定 </button>
+    </view>
   </form>
   <view class="list">
     <block wx:for="{{list}}" wx:for-item="vo" wx:key="id">
       <scroll-view class="view-body" scroll-x="true" scroll-left="{{left}}">
         <view class="item">
-          <view class="content" bindtap="detail" data-id="{{vo.id}}">
+          <view class="content" data-id="{{vo.id}}">
+            <image class="pic" src="{{src_uncomplete}}"></image>
             <text class="text">{{vo.title}}</text>
           </view>
-          <view class="menu rd" bindtap="del" data-id="{{vo.id}}">
-            删除
+          <view class="menu gn" bindtap="complete" data-id="{{vo.id}}">
+            完成
           </view>
-          <view class="menu lb" bindtap="top" data-id="{{vo.id}}">
+          <view class="menu og" bindtap="top" data-id="{{vo.id}}">
             置顶
           </view>
         </view>
       </scroll-view>
     </block>
+    <button class="get_complete" type="mini" bindtap="getCompleted">{{state?"显示已完成任务":"已完成的任务"}}</button>
+    <block wx:for="{{list2}}" wx:for-item="vo" wx:key="id" wx:if="{{!state}}">
+      <scroll-view class="view-body" scroll-x="true" scroll-left="{{left}}">
+        <view class="item">
+          <view class="content" data-id="{{vo.id}}">
+            <image class="pic" src="{{src_complete}}"></image>
+            <text class="text-finish">{{vo.title}}</text>
+          </view>
+          <view class="menu rd" bindtap="del" data-id="{{vo.id}}">
+            删除
+          </view>
+          <view class="menu gn" bindtap="backout" data-id="{{vo.id}}">
+            撤销
+          </view>
+        </view>
+      </scroll-view>
+    </block>
   </view>
-  <view class="xs {{xs}}" data-index="{{xs_index}}" bindtap="xsPage2"></view>
 </view>

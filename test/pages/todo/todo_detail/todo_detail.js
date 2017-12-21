@@ -11,7 +11,25 @@ Page({
     all:{},
     index:null,
     title:null,
-    list:[]
+    list:[],
+    list2:[],
+    input:"",
+    state:true,
+    src_uncomplete:"../../../icons/task_uncomplete.png",
+    src_complete: "../../../icons/task_complete.png"
+  },
+  //切换已经完成的任务
+  getCompleted: function(e){
+    this.setData({state:!this.data.state});
+  },
+  //完成任务
+  complete: function (e) {
+    var arr = all.list[this.data.index].list.filter(function (elem) {
+      return (elem.id == e.currentTarget.dataset.id);
+    });
+    var curIndex = all.list[this.data.index].list.indexOf(arr[0]);
+    all.list[this.data.index].list[curIndex].finish = true;
+    showList(this);
   },
   //删除数据
   del: function (e) {
@@ -24,6 +42,15 @@ Page({
     all.list[this.data.index].list = listobj.topData(all.list[this.data.index].list, e.currentTarget.dataset.id);
     showList(this);
   },
+  //撤销完成的任务
+  backout: function(e){
+    var arr = all.list[this.data.index].list.filter(function (elem) {
+      return (elem.id == e.currentTarget.dataset.id);
+    });
+    var curIndex = all.list[this.data.index].list.indexOf(arr[0]);
+    all.list[this.data.index].list[curIndex].finish = false;
+    showList(this);
+  },
   formSubmit: function (e) {
     all = wx.getStorageSync('todo_list') || { index: 0, list: [], time: 0 };
     var value = e.detail.value;
@@ -34,7 +61,9 @@ Page({
       })
       return;
     }
+    this.setData({input:""});//确定后清空输入框的内容
     value.id = parseInt((new Date()).valueOf() / 1000);
+    value.finish = false;//标记任务为未完成 
     all.list[this.data.index].list.push(value);
     all.time = parseInt((new Date()).valueOf() / 1000);
     try {
@@ -71,14 +100,13 @@ Page({
         icon: 'loading'
       })
       wx.navigateBack();
-    }
-    console.log(arr);
+    };
     this.setData({
       id: option.id,
       title: arr[0].title,
-      index: all.list.indexOf(arr[0]),
-      list: arr[0].list
+      index: all.list.indexOf(arr[0])
     });
+    showList(this);
     wx.setNavigationBarTitle({
       title: this.data.title
     })
@@ -102,8 +130,15 @@ function showList(instance) {
   all.time = parseInt((new Date()).valueOf() / 1000);
   wx.setStorageSync('todo_list', all);
   var arr = all.list[instance.data.index].list;
+  var arr_unfinish = arr.filter(function (elem) {
+    return (elem.finish == false);
+  });
+  var arr_finish = arr.filter(function (elem) {
+    return (elem.finish == true);
+  });
   instance.setData({
-    list: arr
+    list: arr_unfinish,
+    list2: arr_finish
   })
 }
 

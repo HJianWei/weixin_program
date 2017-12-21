@@ -19,11 +19,17 @@
   width: 160%
 }
 .item .content{
+  display: flex;
+  align-items: center;
   width: 80%;
   float: left;
 }
+.item .content .pic{
+  width: 25px; 
+  height: 25px;
+  margin-left: 3vw;
+}
 .item .content .text{
-  vertical-align: top;
   margin-left: 3vw;
 }
 .item .menu{

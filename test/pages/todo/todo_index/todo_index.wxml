@@ -5,6 +5,7 @@
       <scroll-view class="view-body" scroll-x="true" scroll-left="{{left}}">
         <view class="item">
           <view class="content" bindtap="detail" data-id="{{vo.id}}">
+            <image class="pic" src="{{src}}"></image>
             <text class="text">{{vo.title}}</text>
           </view>
           <view class="menu rd" bindtap="del" data-id="{{vo.id}}">

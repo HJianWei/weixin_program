@@ -15,8 +15,7 @@
     "backgroundColor": "#DC143C",
     "navigationBarBackgroundColor": "#8ab839",
     "navigationBarTitleText": "小程序初体验",
-    "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": true
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "backgroundColor": "#f2f2f2",
