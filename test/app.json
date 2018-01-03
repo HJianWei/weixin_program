@@ -1,20 +1,18 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
     "pages/personal/personal",
-    "pages/add/add",
-    "pages/haha/haha",
     "pages/todo/todo_index/todo_index",
     "pages/todo/todo_add/todo_add",
     "pages/todo/todo_add2/todo_add2",
-    "pages/todo/todo_detail/todo_detail"
+    "pages/todo/todo_detail/todo_detail",
+    "pages/movie/movie"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "backgroundColor": "#DC143C",
     "navigationBarBackgroundColor": "#8ab839",
-    "navigationBarTitleText": "小程序初体验",
+    "navigationBarTitleText": "for fun",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -36,19 +34,19 @@
         "selectedIconPath": "icons/note_selected.png"
       },
       {
-        "pagePath": "pages/haha/haha",
+        "pagePath": "pages/index/index",
         "text": "菜谱",
         "iconPath": "icons/cook.png",
         "selectedIconPath": "icons/cook_selected.png"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/movie/movie",
         "text": "电影",
         "iconPath": "icons/movie.png",
         "selectedIconPath": "icons/movie_selected.png"
       },
       {
-        "pagePath": "pages/personal/personal",
+        "pagePath": "pages/index/index",
         "text": "我的",
         "iconPath": "icons/personal.png",
         "selectedIconPath": "icons/personal_selected.png"

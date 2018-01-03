@@ -18,22 +18,6 @@
 
 .usermotto {
   margin-top: 200px;
+  text-align: center;
 }
 
- .add {
-  position: fixed;
-  right: 40rpx;
-  bottom: 40rpx;
-  background: #393F4F;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 60rpx;
-  width: 50rpx;
-  height: 50rpx;
-  line-height: 50rpx;
-  padding: 16rpx; 
-  text-align: center;
-  border-radius: 50%;
-  box-shadow: 0 0 8px 1px #666699;
-  z-index: 1000;
-} 

@@ -1,0 +1,42 @@
+<!--pages/movie/movie.wxml-->
+<!-- <view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">日历</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">电影</view>  
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">搜索</view>  
+</view>   -->
+  
+<!-- <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+    <swiper-item>  
+      <view>日历</view>  
+    </swiper-item>   
+    <swiper-item>  
+      <view>电影</view>  
+    </swiper-item>   
+    <swiper-item> 
+      <view>电影</view>      
+    </swiper-item>  
+</swiper>   -->
+
+<view class="container">
+  <view class="session-search session-search-spacing">
+    <icon class="search-icon" type="search" size="16"></icon>
+    <input class="search-content" placeholder-class="search-placeholder" bindinput="bindSearchInput" placeholder="搜索电影" value="{{searchValue}}" />
+    <block wx:if="{{showDelete}}">
+      <text class="search-delete" bindtap="bindSearchDelete">x</text>
+    </block>
+    <text class="search-cancel" bindtap="bindSearchCancel">取消</text>
+  </view>
+  <view class="session-movie">
+    <block wx:for="{{result.subjects}}" wx:for-item="item">
+      <view class="movie-wrapper" data-id="{{item.id}}" bindtap="handletap">
+        <view class="movie-content">
+          <image class="poster" src="{{item.images.small}}"></image>
+          <view class="summary">
+            <text class="name">{{item.title}}</text>
+            <text class="desc">{{item.summary}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

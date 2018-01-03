@@ -34,7 +34,19 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    windowWidth: 0,
+    windowHeight: 0,
+    doubanBase: "https://api.douban.com",
+    inTheaters: "/v2/movie/in_theaters",
+    comingSoon: "/v2/movie/coming_soon",
+    top250: "/v2/movie/top250",
+    weekly: "/v2/movie/weekly",
+    usBox: "/v2/movie/us_box",
+    newMovies: "/v2/movie/new_movies",
+    subject: "/v2/movie/subject/",
+    celebrity: "/v2/movie/celebrity/",
+    search: "/v2/movie/search?q="
   },
   getUserInfo: function (cb) {
     var that = this
